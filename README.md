@@ -1,6 +1,7 @@
-# quran_finder_apps
+# Quran Finder Apps
 
-A new Flutter project.
+A simple apps for fetching data surah and finding surah with Flutter.
+This project using Clean Architecture and Bloc State Management.
 
 ## Getting Started
 
