@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
+import 'package:quran_finder_apps/cores/configuration/theme.dart';
 
 import 'package:quran_finder_apps/cores/injection/depedency_injection.dart';
 import 'package:quran_finder_apps/features/data_surah/presentation/bloc/data_surah_bloc.dart';
@@ -28,6 +29,9 @@ class MyApp extends StatelessWidget {
         routeInformationProvider: router.routeInformationProvider,
         routeInformationParser: router.routeInformationParser,
         routerDelegate: router.routerDelegate,
+        debugShowCheckedModeBanner: false,
+        title: 'Muslim Quiz',
+        theme: buildTheme(Brightness.light),
       ),
     );
   }

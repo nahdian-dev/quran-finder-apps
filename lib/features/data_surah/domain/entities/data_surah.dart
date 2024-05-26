@@ -18,7 +18,6 @@ class DataSurah extends Equatable {
   });
 
   @override
-  // TODO: implement props
   List<Object?> get props => [
         number,
         totalAyah,

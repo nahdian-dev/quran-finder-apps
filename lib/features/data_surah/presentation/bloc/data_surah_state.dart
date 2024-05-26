@@ -11,7 +11,6 @@ class DataSurahInitial extends DataSurahState {
 
 class DataSurahLoading extends DataSurahState {
   @override
-  // TODO: implement props
   List<Object?> get props => [];
 }
 
@@ -31,7 +30,5 @@ class DataSurahLoaded extends DataSurahState {
   const DataSurahLoaded({required this.dataSurah});
 
   @override
-  // TODO: implement props
   List<Object?> get props => [dataSurah];
-
 }

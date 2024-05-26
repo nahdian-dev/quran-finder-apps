@@ -5,16 +5,19 @@ part 'data_surah_model.g.dart';
 
 @JsonSerializable()
 class DataSurahModel extends DataSurah {
+  @JsonKey(name: "numberOfAyahs")
+  final int? numberOfAyahs;
+
   const DataSurahModel({
     required int? number,
-    required int? totalAyah,
+    required this.numberOfAyahs,
     required String name,
     required String translation,
     required String revelation,
     required String description,
   }) : super(
           number: number,
-          totalAyah: totalAyah,
+          totalAyah: numberOfAyahs,
           name: name,
           translation: translation,
           revelation: revelation,

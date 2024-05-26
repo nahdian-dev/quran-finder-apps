@@ -9,7 +9,7 @@ part of 'data_surah_model.dart';
 DataSurahModel _$DataSurahModelFromJson(Map<String, dynamic> json) =>
     DataSurahModel(
       number: json['number'] as int?,
-      totalAyah: json['totalAyah'] as int?,
+      numberOfAyahs: json['numberOfAyahs'] as int?,
       name: json['name'] as String,
       translation: json['translation'] as String,
       revelation: json['revelation'] as String,
@@ -19,9 +19,9 @@ DataSurahModel _$DataSurahModelFromJson(Map<String, dynamic> json) =>
 Map<String, dynamic> _$DataSurahModelToJson(DataSurahModel instance) =>
     <String, dynamic>{
       'number': instance.number,
-      'totalAyah': instance.totalAyah,
       'name': instance.name,
       'translation': instance.translation,
       'revelation': instance.revelation,
       'description': instance.description,
+      'numberOfAyahs': instance.numberOfAyahs,
     };

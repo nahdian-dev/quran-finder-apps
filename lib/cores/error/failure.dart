@@ -10,7 +10,6 @@ class GeneralFailure extends Failure {
   const GeneralFailure({required this.message});
 
   @override
-  // TODO: implement props
   List<Object?> get props => [message];
 }
 
@@ -20,7 +19,6 @@ class ServerFailure extends Failure {
   const ServerFailure({required this.message});
 
   @override
-  // TODO: implement props
   List<Object?> get props => [message];
 }
 
@@ -30,6 +28,5 @@ class NetworkFailure extends Failure {
   const NetworkFailure({required this.message});
 
   @override
-  // TODO: implement props
   List<Object?> get props => [message];
 }
