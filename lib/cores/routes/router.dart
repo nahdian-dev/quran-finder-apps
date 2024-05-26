@@ -10,7 +10,12 @@ final GoRouter router = GoRouter(
     ),
     GoRoute(
       path: '/detail-surah',
-      builder: (context, state) => const DetailSurahPage(),
+      builder: (context, state) {
+        final extra = state.extra as Map<String, dynamic>;
+        return DetailSurahPage(
+          data: extra['data'] ?? {'data': 'No Data'},
+        );
+      },
     ),
   ],
 );

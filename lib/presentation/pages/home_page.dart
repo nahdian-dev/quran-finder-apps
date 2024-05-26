@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
+import 'package:go_router/go_router.dart';
 import 'package:quran_finder_apps/features/data_surah/presentation/bloc/data_surah_bloc.dart';
 
 import '../widgets/custom_app_bar.dart';
@@ -71,7 +72,20 @@ class _HomePageState extends State<HomePage> {
                         int number = index + 1;
 
                         return ListTile(
-                          onTap: () {},
+                          onTap: () {
+                            context.push('/detail-surah', extra: {
+                              'data': {
+                                'number': number,
+                                'totalAyah': state.dataSurah[index].totalAyah,
+                                'name': state.dataSurah[index].name,
+                                'translation':
+                                    state.dataSurah[index].translation,
+                                'revelation': state.dataSurah[index].revelation,
+                                'description':
+                                    state.dataSurah[index].description,
+                              }
+                            });
+                          },
                           leading: Text(number.toString()),
                           title: Text(
                             state.dataSurah[index].name,
