@@ -53,7 +53,38 @@ class CustomAppBar extends StatelessWidget {
                   backgroundColor: const Color(0xFFf6faff),
                   radius: 30,
                   child: IconButton(
-                    onPressed: () {},
+                    onPressed: () {
+                      showModalBottomSheet<void>(
+                        context: context,
+                        builder: (context) {
+                          return SizedBox(
+                            height: 200,
+                            child: Container(
+                              margin:
+                                  const EdgeInsets.symmetric(horizontal: 10),
+                              child: Column(
+                                mainAxisAlignment:
+                                    MainAxisAlignment.spaceBetween,
+                                children: [
+                                  // TITLE
+                                  Row(
+                                    mainAxisAlignment:
+                                        MainAxisAlignment.spaceBetween,
+                                    children: [
+                                      Text("Filter"),
+                                      IconButton(
+                                        onPressed: () {},
+                                        icon: const Icon(Icons.close),
+                                      ),
+                                    ],
+                                  ),
+                                ],
+                              ),
+                            ),
+                          );
+                        },
+                      );
+                    },
                     color: ColorsManager.blackColor,
                     icon: const Icon(
                       Icons.format_list_bulleted_rounded,

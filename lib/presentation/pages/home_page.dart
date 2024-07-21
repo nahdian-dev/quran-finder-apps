@@ -73,6 +73,7 @@ class _HomePageState extends State<HomePage> {
 
                         return ListTile(
                           onTap: () {
+                            //NAVIGATION
                             context.push('/detail-surah', extra: {
                               'data': {
                                 'number': number,
@@ -122,9 +123,5 @@ class _HomePageState extends State<HomePage> {
         ),
       ),
     );
-  }
-
-  Future<void> _handelRefresh() async {
-    context.read<DataSurahBloc>().add(DataSurahEventGetDataSurah());
   }
 }
